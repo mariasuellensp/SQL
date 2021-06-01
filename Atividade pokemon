@@ -1,0 +1,84 @@
+1) Qual o ID do pokemon Lucario?
+448
+SELECT * de pokedex onde nome = 'Lucario'
+
+
+2) Qual a média de altura dos pokemons que são lendarios?
+22.8116
+SELECIONE AVG(altura) DE pokedex WHERE lendario = 1
+
+
+3) Quais pokemons são mais pesados pela média: os dos tipos rock ou do tipo stell?
+
+o tipo steel é o mais pesado:
+avg (peso)
+1471.3696
+
+tipo rock:
+avg (peso)
+960.8182
+
+Select avg (peso) from `pokedex` where tipo1='steel' or tipo2= 'steel';
+Select avg (peso) from `pokedex` where tipo1='rock' or tipo2= 'rock'
+
+4) Traduzir os tipos dos pokemons
+UPDATE `pokedex` SET tipo1 = 'planta' WHERE tipo1 = 'grass';
+UPDATE `pokedex` SET tipo2 = 'planta' WHERE tipo2 = 'grass';
+UPDATE `pokedex` SET tipo1 = 'fogo' WHERE tipo1 = 'fire'
+UPDATE `pokedex` SET tipo2 = 'fogo' WHERE tipo2 = 'fire'
+UPDATE `pokedex` SET tipo1 = 'inseto' WHERE tipo1 = 'bug'
+UPDATE `pokedex` SET tipo2 = 'inseto' WHERE tipo2 = 'bug'
+UPDATE `pokedex` SET tipo1 = 'sombrio' WHERE tipo1 = 'dark';
+UPDATE `pokedex` SET tipo2 = 'sombrio' WHERE tipo2 = 'dark';
+UPDATE `pokedex` SET tipo1 = 'dragao' WHERE tipo1 = 'dragon';
+UPDATE `pokedex` SET tipo2 = 'dragao' WHERE tipo2 = 'dragon';
+UPDATE `pokedex` SET tipo1 = 'eletrico' WHERE tipo1 = 'electric';
+UPDATE `pokedex` SET tipo2 = 'eletrico' WHERE tipo2 = 'electric';
+UPDATE `pokedex` SET tipo1 = 'fada' WHERE tipo1 = 'fairy';
+UPDATE `pokedex` SET tipo2 = 'fada' WHERE tipo2 = 'fairy';
+UPDATE `pokedex` SET tipo1 = 'lutador' WHERE tipo1 = 'fighting';
+UPDATE `pokedex` SET tipo2 = 'lutador' WHERE tipo2 = 'fighting';
+UPDATE `pokedex` SET tipo1 = 'voador' WHERE tipo1 = 'flying';
+UPDATE `pokedex` SET tipo2 = 'voador' WHERE tipo2 = 'flying';
+UPDATE `pokedex` SET tipo1 = 'fantasma' WHERE tipo1 = 'ghost';
+UPDATE `pokedex` SET tipo2 = 'fantasma' WHERE tipo2 = 'ghost';
+UPDATE `pokedex` SET tipo1 = 'terrestre' WHERE tipo1 = 'ground';
+UPDATE `pokedex` SET tipo2 = 'terrestre' WHERE tipo2 = 'ground';
+UPDATE `pokedex` SET tipo1 = 'gelo' WHERE tipo1 = 'ice';
+UPDATE `pokedex` SET tipo2 = 'gelo' WHERE tipo2 = 'ice';
+UPDATE `pokedex` SET tipo1 = 'venenoso' WHERE tipo1 = 'poison';
+UPDATE `pokedex` SET tipo2 = 'venenoso' WHERE tipo2 = 'poison';
+UPDATE `pokedex` SET tipo1 = 'psiquico' WHERE tipo1 = 'psychic';
+UPDATE `pokedex` SET tipo2 = 'psiquico' WHERE tipo2 = 'psychic';
+UPDATE `pokedex` SET tipo1 = 'pedra' WHERE tipo1 = 'rock';
+UPDATE `pokedex` SET tipo2 = 'pedra' WHERE tipo2 = 'rock';
+UPDATE `pokedex` SET tipo1 = 'aço' WHERE tipo1 = 'steel';
+UPDATE `pokedex` SET tipo2 = 'aço' WHERE tipo2 = 'steel';
+UPDATE `pokedex` SET tipo1 = 'agua' WHERE tipo1 = 'water';
+UPDATE `pokedex` SET tipo2 = 'agua' WHERE tipo2 = 'water';
+
+
+
+5) Utilizando o site https://serebii.net/pokedex-swsh/ encontre os pokemon com os IDs 80, 122, 149 e insira-os na tabela.
+
+INSERT INTO `pokedex` (`pokedex_number`, `nome`, `attack`, `defesa`, `altura`, `hp`, `velocidade`, `tipo1`, `tipo2`, `peso`, `generation`, `lendario`) VALUES ('80', 'Slowbro', '75', '110', '1.6', '95', '30', 'psiquico', 'agua', '78.5', '1', b'0');
+INSERT INTO `pokedex` (`pokedex_number`, `nome`, `attack`, `defesa`, `altura`, `hp`, `velocidade`, `tipo1`, `tipo2`, `peso`, `generation`, `lendario`) VALUES ('122', 'Mr. Mime', '45', '65', '1.3', '40', '90', 'psiquico', 'fada', '54.5', '8', b'0');
+INSERT INTO `pokedex` (`pokedex_number`, `nome`, `attack`, `defesa`, `altura`, `hp`, `velocidade`, `tipo1`, `tipo2`, `peso`, `generation`, `lendario`) VALUES ('149', 'Dragonite', '134', '95', '2.2', '91', '80', 'dragao', 'voador', '210', '1', b'0');
+
+6) Qual tipo de pokemon possui mais attack em média.
+INSERT INTO tipo1, avg(ataque) do grupo 'pokedex' por tipo1;
+
+
+
+7) Qual geração de pokemons é mais pesada, em média?
+Select * avg(altura) of 'pokedex' where the WHERE generation ='1'; 
+Select * avg(altura) of 'pokedex' where the GENERATION WHERE ='2';
+Select * avg(altura) of 'pokedex' where the GENERATION WHERE ='3'; 
+Select * avg(altura) of 'pokedex' where the GENERATION WHERE ='4'; 
+Select * avg(altura) of 'pokedex' where the GENERATION WHERE ='5'; 
+Select * avg(altura) of 'pokedex' where the GENERATION WHERE ='6';
+Select * avg(altura) of 'pokedex' where the GENERATION WHERE ='7';
+
+
+8) A geração três possui quantos pokemons?
+ SELECT COUNT(*) DE 'pokedex' WHERE a geração ='3';
